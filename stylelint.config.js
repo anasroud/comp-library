@@ -1,0 +1,76 @@
+module.exports = {
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-recommended-scss',
+    'stylelint-config-prettier',
+  ],
+  plugins: ['stylelint-order', 'stylelint-scss'],
+  rules: {
+    'at-rule-no-unknown': null,
+    'color-hex-length': 'short',
+    'color-named': 'never',
+    'comment-empty-line-before': [
+      'always',
+      {
+        except: ['first-nested'],
+        ignore: ['stylelint-commands'],
+      },
+    ],
+    'comment-whitespace-inside': 'always',
+    'custom-property-empty-line-before': [
+      'always',
+      {
+        except: ['after-custom-property', 'first-nested'],
+        ignore: ['after-comment', 'inside-single-line-block'],
+      },
+    ],
+    'declaration-bang-space-after': 'never',
+    'declaration-bang-space-before': 'always',
+    'declaration-block-single-line-max-declarations': 1,
+    'declaration-empty-line-before': [
+      'always',
+      {
+        except: ['after-declaration', 'first-nested'],
+        ignore: ['after-comment', 'inside-single-line-block'],
+      },
+    ],
+    'function-name-case': [
+      'lower',
+      {
+        ignoreFunctions: '/^get.*$/',
+      },
+    ],
+    'function-no-unknown': null,
+    'function-url-no-scheme-relative': true,
+    'function-whitespace-after': 'always',
+    'length-zero-no-unit': true,
+    'max-nesting-depth': 2,
+    'media-feature-colon-space-after': 'always',
+    'media-feature-colon-space-before': 'never',
+    'media-feature-parentheses-space-inside': 'never',
+    'media-feature-range-operator-space-after': 'always',
+    'media-feature-range-operator-space-before': 'always',
+    'order/properties-alphabetical-order': true,
+    'property-no-vendor-prefix': null,
+    'scss/at-import-partial-extension': 'always',
+    'scss/at-rule-no-unknown': true,
+    'scss/no-global-function-names': null,
+    'selector-attribute-brackets-space-inside': 'never',
+    'selector-attribute-operator-space-after': 'never',
+    'selector-attribute-operator-space-before': 'never',
+    'selector-class-pattern': '^[a-z][a-zA-Z0-9]+$',
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: ['global', 'export'],
+      },
+    ],
+    'selector-pseudo-class-parentheses-space-inside': 'never',
+    'selector-pseudo-element-colon-notation': 'double',
+    'selector-type-case': 'lower',
+    'string-quotes': 'single',
+    'value-no-vendor-prefix': null,
+    'color-function-notation': null,
+    'alpha-value-notation': null,
+  },
+};

@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "lib",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "declaration": true,
+    "declarationDir": "dist/lib",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react"
+  },
+  "include": [
+    "src/components",
+    "src/docs/**/*.tsx",
+    "src/shared",
+    "src/index.ts",
+    "./jest-setup.ts",
+    "src/deprecated/**/*.tsx"
+  ],
+  "exclude": [
+    "lib",
+    "node_modules",
+    "**/*.test.*",
+    "eslint.config.js",
+    "rollup.config.js",
+    "src/assets",
+    "src/data",
+    "src/docs",
+    "src/helpers"
+  ]
+}
