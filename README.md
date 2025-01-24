@@ -29,8 +29,11 @@ Anas Roud (roud2@hotmail.com)
 ## Usage
 
 1. Import the library in your JavaScript file:
+    ```sh
+        npm install @anasroud/comp-library
+    ```
     ```javascript
-        import TestComponent from '@anas-comp-library'
+        import TestComponent from '@anasroud/comp-library'
     ```
 2. Add the needed props
 
