@@ -5,6 +5,14 @@ const prettierPlugin = require('eslint-plugin-prettier');
 module.exports = [
   {
     files: ['**/*.ts', '**/*.tsx'],
+    ignores: [
+      'dist/**/*.ts',
+      'node_modules/*',
+      'rollup.config.js',
+      'storybook-static',
+      '**/*.stories.tsx',
+      'src/deprecated/**',
+    ],
     languageOptions: {
       parser,
     },
@@ -18,13 +26,5 @@ module.exports = [
       '@typescript-eslint/no-empty-interface': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
     },
-    ignores: [
-      'node_modules',
-      'dist',
-      'rollup.config.js',
-      'storybook-static',
-      '**/*.stories.tsx',
-      'src/deprecated/**',
-    ],
   },
 ];
