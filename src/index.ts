@@ -1,1 +1,1 @@
-export * from './components/TestCard';
+export * from './components/Buttons';

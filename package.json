@@ -1,6 +1,6 @@
 {
-  "name": "comp-library",
-  "version": "1.0.0",
+  "name": "@anasroud/comp-library",
+  "version": "0.0.1",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "sideEffects": false,
@@ -99,5 +99,13 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "sass": "^1.83.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anasroud/comp-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anasroud/comp-library/issues"
+  },
+  "homepage": "https://github.com/anasroud/comp-library#readme"
 }
