@@ -40,7 +40,7 @@ module.exports = {
           loader: require.resolve('css-loader'),
           options: {
             modules: {
-              localIdentName: 'COMPLIB-[local]--[hash:base64:5]',
+               localIdentName: 'COMPLIB-[local]--[hash:base64:5]',
             },
           },
         },
