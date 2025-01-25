@@ -48,6 +48,16 @@ module.exports = {
       ],
       include: path.resolve(__dirname, '../'),
     });
+    config.optimization.sideEffects = false;
+    config.plugins = config.plugins.map((plugin) => {
+      if (plugin.constructor.name === 'IgnorePlugin') {
+        return new webpack.IgnorePlugin({
+          resourceRegExp: plugin.options.resourceRegExp,
+          contextRegExp: plugin.options.contextRegExp,
+        });
+      }
+      return plugin;
+    });
 
     return config;
   },
