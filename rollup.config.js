@@ -52,6 +52,7 @@ export default {
         {
           src: [
             'src/shared/styles',
+            'src/shared/fonts',
           ],
           dest: 'dist',
         },

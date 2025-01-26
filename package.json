@@ -1,6 +1,6 @@
 {
   "name": "@anasroud/comp-library",
-  "version": "0.0.3",
+  "version": "0.0.3-snapshot-65fb3b7723419ec5f24d93e77085f21cd4f3d10d2",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "sideEffects": false,
@@ -9,7 +9,8 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint:css": "stylelint '**/*.scss'",
@@ -68,8 +69,10 @@
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
+    "file-loader": "^6.2.0",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.4.2",

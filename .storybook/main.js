@@ -32,22 +32,37 @@ module.exports = {
     'storybook-dark-mode',
   ],
   webpackFinal: async (config, { configType }) => {
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: [
-        'style-loader',
-        {
-          loader: require.resolve('css-loader'),
-          options: {
-            modules: {
-               localIdentName: 'COMPLIB-[local]--[hash:base64:5]',
+    config.module.rules.push(
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              modules: {
+                localIdentName: 'COMPLIB-[local]--[hash:base64:5]',
+              },
             },
           },
-        },
-        'sass-loader',
-      ],
-      include: path.resolve(__dirname, '../'),
-    });
+          'sass-loader',
+        ],
+        include: path.resolve(__dirname, '../'),
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+        include: path.resolve(__dirname, '../'),
+      },
+    );
     config.optimization.sideEffects = false;
     config.plugins = config.plugins.map((plugin) => {
       if (plugin.constructor.name === 'IgnorePlugin') {
