@@ -3,7 +3,6 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     '**/src/components/**/*.tsx',
-    '**/src/shared/utilities/*.ts',
     '!**/src/components/**/*.stories.tsx',
   ],
   coverageThreshold: {
@@ -18,7 +17,6 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'jsx', 'js'],
   moduleNameMapper: {
     '\\.(scss|sass|css)$': 'identity-obj-proxy',
-    '\\.svg': '<rootDir>/test/svgrMock.js',
   },
   preset: 'ts-jest',
   setupFiles: ['./jest.storybookSetup.js'],
@@ -27,10 +25,10 @@ module.exports = {
     '<rootDir>/node_modules/',
     '<rootDir>/storybook-static',
     '<rootDir>/dist',
-    '<rootDir>/src/deprecated',
   ],
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|jsx|js)$',
   transform: {
     '^.+\\.[t|j]sx?$': 'ts-jest',
   },
+  setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
 };
