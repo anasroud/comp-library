@@ -1,10 +1,10 @@
 {
   "name": "@anasroud/comp-library",
-  "version": "0.0.3-snapshot-65fb3b7723419ec5f24d93e77085f21cd4f3d10d2",
+  "version": "0.0.5",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "sideEffects": false,
-  "types": "./dist/lib/index.d.ts",
+  "types": "./dist/lib/src/index.d.ts",
   "files": [
     "dist"
   ],
