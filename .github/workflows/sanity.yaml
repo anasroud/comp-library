@@ -64,7 +64,6 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node-version: 22.x
-        run: echo "$npmrc" > .npmrc
       - name: Install Node Packages
         run: npm ci
         timeout-minutes: 10
