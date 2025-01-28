@@ -1,0 +1,6 @@
+.nvmrc
+./node_modules
+./storybook-static
+package.json
+./coverage
+.vscode
