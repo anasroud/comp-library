@@ -1,0 +1,72 @@
+name: "Sanity"
+on:
+  pull_request
+jobs:
+  unit:
+    name: "Unit Tests"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 22.x
+      - name: Install Node Packages
+        run: npm ci
+        timeout-minutes: 10
+      - name: Running Unit Tests
+        run: npm run test
+        timeout-minutes: 10
+  eslint:
+    name: "ESLint"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 22.x
+      - name: Install Node Packages
+        run: npm ci
+        timeout-minutes: 10
+      - name: Running ESLint
+        run: npm run lint:ts
+        timeout-minutes: 10
+  sass-lint:
+    name: "Sass Lint"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 22.x
+      - name: Install Node Packages
+        run: npm ci
+        timeout-minutes: 10
+      - name: Running Sass Lint
+        run: npm run lint:css
+        timeout-minutes: 10
+  typescript-build:
+    name: "Build"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 22.x
+      - name: Install Node Packages
+        run: npm ci
+        timeout-minutes: 10
+      - name: Running Build process
+        run: npm run build
+        timeout-minutes: 10

@@ -8,13 +8,13 @@ export default {
 } as Meta;
 
 const Template: StoryFn<ShowCaseCardProps> = (args) => (
-    <div
-        style={{
-            margin: '0 auto',
-            padding: '2rem',
-         }}>
-      <ShowCaseCard {...args} />
-    </div>
+  <div
+    style={{
+      margin: '0 auto',
+      padding: '2rem',
+    }}>
+    <ShowCaseCard {...args} />
+  </div>
 );
 
 export const Default = Template.bind({});
@@ -44,11 +44,13 @@ AsButton.args = {
 const customHeight: StoryFn<ShowCaseCardProps> = (args: ShowCaseCardProps) => {
   return (
     <div
-        style={{
-            '--img-height': '450px',
-            margin: '0 auto',
-            padding: '2rem',
-         } as React.CSSProperties}>
+      style={
+        {
+          '--img-height': '450px',
+          margin: '0 auto',
+          padding: '2rem',
+        } as React.CSSProperties
+      }>
       <ShowCaseCard {...args} />
     </div>
   );

@@ -8,10 +8,9 @@ module.exports = [
     ignores: [
       'dist/**/*.ts',
       'node_modules/*',
+      '**/storybook-static/**/*',
       'rollup.config.js',
-      'storybook-static',
-      '**/*.stories.tsx',
-      'src/deprecated/**',
+      '**/coverage/**/*',
     ],
     languageOptions: {
       parser,
