@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode, AllHTMLAttributes } from 'react';
 
-export default interface DefaultProps {
+export default interface DefaultProps extends AllHTMLAttributes<any> {
   _ref?: any;
   children?: ReactNode;
   className?: string;

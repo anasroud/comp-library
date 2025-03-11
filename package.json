@@ -1,6 +1,6 @@
 {
   "name": "@anasroud/comp-library",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "sideEffects": false,
@@ -15,7 +15,7 @@
     "build-storybook": "storybook build",
     "lint:css": "stylelint --config stylelint.config.js \"src/**/*.scss\"",
     "build": "rollup -c",
-    "lint:ts": "eslint . --ignore-pattern \"storybook-static/*\" --ignore-pattern \"coverage/*\"",
+    "lint:ts": "eslint . --ignore-pattern \"storybook-static/*\" --ignore-pattern \"coverage/*\" --ignore-pattern \".storybook/*\" --ignore-pattern \"dist/*\" --ext .ts,.tsx",
     "lint:all": "npm run lint:ts && npm run lint:css",
     "format": "prettier --write .",
     "prepare": "husky prepare"

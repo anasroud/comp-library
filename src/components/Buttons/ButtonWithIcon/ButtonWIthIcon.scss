@@ -1,13 +1,14 @@
 .button {
+    align-items: center;
     background-color: var(--background-secondary);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: var(--text-primary);
+    column-gap: 6px;
     cursor: pointer;
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: 500;
+    display: flex;
+    justify-content: center;
     padding: 8px 16px;
     transition: background-color 0.2s, color 0.2s;
     user-select: none;
@@ -18,7 +19,7 @@
         transition: transform 0.75s;
     }
 
-    &:active {
+    &:active{
         transform: translate(0, 0);
         transition: transform 0.1s;
     }
@@ -29,5 +30,9 @@
         color: var(--text-secondary);
         cursor: not-allowed;
         transform: translate(0, 0);
+    }
+
+    svg {
+        fill: var(--text-primary);
     }
 }

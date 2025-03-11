@@ -1,0 +1,26 @@
+
+.heroContainer {
+    background-repeat: no-repeat;
+    background-size: calc(cover + 60%);
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.buttonContainer {
+    background-color: var(--main-text-color);
+    max-width: 320px;
+}
+
+.heroTitle {
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.heroSubtitle {
+    letter-spacing: 4px;
+    text-transform: capitalize;
+}

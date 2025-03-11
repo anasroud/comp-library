@@ -8,13 +8,18 @@ const SimpleButton = ({
   label,
   buttonTag = 'button',
   isDisabled = false,
+  className,
   theme = 'light',
 }: IButtonProps) => {
   const As = buttonTag;
   return (
     <As
       data-theme={theme}
-      className={cx(styles.button, { [styles.disabled]: isDisabled })}
+      className={cx(
+        styles.button,
+        { [styles.disabled]: isDisabled },
+        className,
+      )}
       onClick={onClick}>
       {label}
     </As>
