@@ -1,5 +1,5 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
-// eslint-disable
+/* eslint-disable */
 import path from 'path';
 import postcss from 'postcss';
 import webpack from 'webpack';

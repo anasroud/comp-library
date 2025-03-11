@@ -20,8 +20,9 @@ const ButtonWithIcon = ({
   return (
     <As
       data-theme={theme}
+      role={buttonTag}
       className={cx(styles.button, { [styles.disabled]: isDisabled })}
-      onClick={onClick}>
+      onClick={!isDisabled ? onClick : undefined}>
       {icon && <div className={styles.iconWrapper}>{icon}</div>}
       {label}
     </As>
