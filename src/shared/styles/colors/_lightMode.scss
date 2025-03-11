@@ -1,7 +1,8 @@
 @use 'tokens' as tokens;
 
 [data-theme='light'] {
-  --background: $gray-50;
+  --background: #{tokens.$gray-50};
+  --inverse-background: #{tokens.$gray-600};
   --background-secondary: #{tokens.$gray-100};
   --text-primary: #{tokens.$gray-800};
   --text-secondary: #{tokens.$gray-600};

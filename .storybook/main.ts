@@ -1,5 +1,8 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
-const path = require('path');
+// eslint-disable
+import path from 'path';
+import postcss from 'postcss';
+import webpack from 'webpack';
 
 module.exports = {
   stories: ['../src/**/*.stories.tsx'],
@@ -10,16 +13,21 @@ module.exports = {
     name: '@storybook/react-webpack5',
     options: {},
   },
+  typescript: {
+    reactDocgen: 'react-docgen',
+  },
   docs: {
     autodocs: true,
+  },
+  managerWebpack: (config) => {
+    config.output.publicPath = '/<repository-name>/'; // Set this to match the repo name
+    return config;
   },
   addons: [
     {
       name: '@storybook/addon-styling-webpack',
       options: {
-        postCss: {
-          implementation: require('postcss'),
-        },
+        implementation: postcss,
       },
     },
     '@storybook/addon-webpack5-compiler-swc',

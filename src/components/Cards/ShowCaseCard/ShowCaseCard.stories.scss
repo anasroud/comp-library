@@ -1,0 +1,31 @@
+.story {
+  display: grid;
+  gap: 1rem;
+  height: 450px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  width: 450px;
+}
+
+.imageContainer {
+    position: absolute;
+    right: -40%;
+    top: 0;
+    width: 100%;
+}
+
+.imageContainerSecond {
+    left: -40%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.imageContainerThird {
+    bottom: -40%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}

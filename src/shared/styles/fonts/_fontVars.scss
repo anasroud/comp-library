@@ -66,3 +66,9 @@ small {
     font-size: tokens.$font-size-small;
     font-weight: tokens.$font-weight-normal;
 }
+
+span {
+    font-family: tokens.$font-family-secondary;
+    font-size: tokens.$font-size-base;
+    font-weight: tokens.$font-weight-normal;
+}

@@ -2,6 +2,7 @@
 
 [data-theme='dark'] {
   --background: #{tokens.$gray-800};
+  --inverse-background: #{tokens.$gray-200};
   --background-secondary: #{tokens.$gray-750};
   --text-primary: #{tokens.$gray-50};
   --text-secondary: #{tokens.$gray-200};
