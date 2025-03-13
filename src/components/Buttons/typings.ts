@@ -1,8 +1,11 @@
 import DefaultProps from '../../shared/typings/DefaultProps';
 
 export default interface IButtonProps extends DefaultProps {
-  onClick: () => void;
+  onClick?: () => void;
   label: string;
   buttonTag?: 'button' | 'a';
   isDisabled?: boolean;
+  buttonLink?: string;
+  fill?: boolean;
+  theme?: 'light' | 'dark';
 }

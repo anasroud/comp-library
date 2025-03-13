@@ -3,14 +3,22 @@ import IButtonProps from '../typings';
 import styles from './SimpleButton.scss';
 import cx from 'classnames';
 
+export interface ISimpleButtonProps extends IButtonProps {
+  fill?: boolean;
+  isActive?: boolean;
+}
+
 const SimpleButton = ({
   onClick,
   label,
   buttonTag = 'button',
   isDisabled = false,
   className,
+  buttonLink,
+  fill,
+  isActive,
   theme = 'light',
-}: IButtonProps) => {
+}: ISimpleButtonProps) => {
   const As = buttonTag;
   return (
     <As
@@ -19,7 +27,9 @@ const SimpleButton = ({
         styles.button,
         { [styles.disabled]: isDisabled },
         className,
+        { [styles.fill]: fill || isActive },
       )}
+      href={buttonTag !== 'button' ? buttonLink : undefined}
       onClick={onClick}>
       {label}
     </As>
