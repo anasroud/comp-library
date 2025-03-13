@@ -4,7 +4,6 @@ import styles from './ButtonWIthIcon.scss';
 import cx from 'classnames';
 
 export interface IButtonWithIconProps extends IButtonProps {
-  theme?: 'light' | 'dark';
   icon: React.ReactElement;
 }
 

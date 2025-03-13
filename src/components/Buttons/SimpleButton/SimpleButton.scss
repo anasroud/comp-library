@@ -1,6 +1,4 @@
 .button {
-    background-color: var(--background-secondary);
-    border: 1px solid var(--border-color);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: var(--text-primary);
@@ -12,10 +10,13 @@
     transition: background-color 0.2s, color 0.2s;
     user-select: none;
 
+    &.fill {
+        background-color: var(--background-secondary);
+        border: 1px solid var(--border-color);
+    }
+
     &:hover {
         background-color: var(--hover-color);
-        transform: translate(0, -2px);
-        transition: transform 0.75s;
     }
 
     &:active {
